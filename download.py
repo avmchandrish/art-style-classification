@@ -29,6 +29,7 @@ for style in styles:
 	images = list(df[df['style'] == style].image)
 	if len(images) == 0:
 		print('Wrong Entry')
+		break
 
 	st = time.time()
 	for i, img_url in enumerate(images):
