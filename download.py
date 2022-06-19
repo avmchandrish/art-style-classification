@@ -11,8 +11,8 @@ styles = sys.argv[1].split(',')
 print(styles)
 
 df = pd.read_csv('./artworks.csv')
-s3 = boto3.client("s3",aws_access_key_id = 'AKIAROPW2QKXRFZQ6AEG', 
-                  aws_secret_access_key = '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') 
+s3 = boto3.client("s3",aws_access_key_id = '***', 
+                  aws_secret_access_key = '****') 
 
 # creating a folder for a style on s3
 for style in styles:
