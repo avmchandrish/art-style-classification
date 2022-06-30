@@ -18,7 +18,7 @@ In this project, we used transfer learning to classify the style (or movement) o
 
 We all know that computer vision models are great at classifying images of objects; but can they classify the *style* of an image just as well?
 
-For instance, we may feel confident that a computer vision neural network could correctly classify both of the below paintings as paintings of dogs. But could they tell that the left is an *renaissance* painting of a dog while the right is an *impressionist* painting of a dog?
+For instance, we may feel confident that a computer vision neural network could correctly classify both of the below paintings as paintings of dogs. But could they tell that the left is an *impressionist* painting of a dog while the right is a *renaissance* painting of a dog?
 
 ![image](https://user-images.githubusercontent.com/51177846/176795578-10fe809f-715b-44cf-a64a-d849b68c72e3.png)
 
