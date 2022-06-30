@@ -5,17 +5,11 @@ Chandrish Ambati & Lucas De Oliveira
 
 ## Repo Contents
 
-* Training notebook
-* Training scripts:
-	* VGG-19
-	* ResNet-34
-	* ViT-B/16
-* Training logs:
-	* VGG-19
-	* ResNet-34
-	* ViT-B/16
-* Model checkpoints
-* Visualizing the results
+* [Training notebook:](https://github.com/avmchandrish/art-style-classification/blob/main/training.ipynb) contains and explains functions used in training
+* [Training scripts:](https://github.com/avmchandrish/art-style-classification/tree/main/scripts) scripts launched from terminal for training
+* [Training logs:](https://github.com/avmchandrish/art-style-classification/tree/main/training_log) training results
+* Presentation slides: first and final presentation slides for this project
+
 
 
 ## Background
@@ -23,6 +17,10 @@ Chandrish Ambati & Lucas De Oliveira
 In this project, we used transfer learning to classify the style (or movement) of artworks. 
 
 We all know that computer vision models are great at classifying images of objects; but can they classify the *style* of an image just as well?
+
+For instance, we may feel confident that a computer vision neural network could correctly classify both of the below paintings as paintings of dogs. But could they tell that the left is an *renaissance* painting of a dog while the right is an *impressionist* painting of a dog?
+
+**img**
 
 In researching similar work, we discovered [this paper](http://proceedings.mlr.press/v77/lecoutre17a/lecoutre17a.pdf) where authors Lecoutre, Negrevergne, and Yger similarly train various pretrained and re-trained AlexNet and ResNet models to classify the styles of artwork obtained from [WikiArt](https://www.wikiart.org/en/paintings-by-style). We decided to re-create their experiment by training a different set of multi-class classification architectures to classify artworks into the same 25 classes:
 
@@ -86,7 +84,7 @@ We used the following pre-trained models from the `torchvision` library:
 
 * VGG-19: `torchvision.models.vgg19(pretrained=True)`
 * ResNet-34: `torchvision.models.resnet34(pretrained=True)`
-* ViT-B/16: `torchvision.models.vit_b_16(pretraiend=True)`
+* ViT-B/16: `torchvision.models.vit_b_16(pretrained=True)`
 
 We then **froze the body of the models** and reinstantiated the head (final classification layer) so that **only the head of the model would be updated during training.**
 
@@ -99,15 +97,25 @@ We decided that we would avoid image transformations that could destroy some inf
 
 ### Training method
 
-... GPU from terminal ...
+We trained each partially frozen model for only four epochs as we were constrained in both computational power and time (each epoch took about 2 hours). We used python scripts to train from the GPU terminal which can be found under the `scripts/` folder of this repo.
 
-... how many epochs, learning rate, etc ...
+Because of these constraints we were not able to tune training parameters or experiment with additional data augmentation or training techniques.
+
+Below is the validation loss for the first four epochs of training for each model:
+
+**image**
+
+Below is the validation accuracy for the first four epochs of training for each model:
+
+**image**
 
 ## Results
 
-TBD
+After only four epochs we were able to reach a similar level of performance to Lecoutre et. al. before their experiments with retraining, bagging, and distortion. Below is a plot of the validation set accuracy showing the top-1 accuracy of each model including the ones from the aforementioned paper.
 
+**image**
 
+We definitely intend on further refining this work. Our next steps will be to train these models for longer using cloud computing resources such as AWS or GCP and to experiment with freezing/unfreezing different layers as well as fine-tuning the same models.
 
 
 
