@@ -1,0 +1,4 @@
+[0] train loss: 2.0470 | train acc: 0.3594 | valid loss: 2.0494 | valid acc: 0.3561
+[1] train loss: 2.0207 | train acc: 0.3861 | valid loss: 2.0204 | valid acc: 0.3833
+[2] train loss: 1.9879 | train acc: 0.4025 | valid loss: 1.9875 | valid acc: 0.4013
+[3] train loss: 1.9621 | train acc: 0.4166 | valid loss: 1.9630 | valid acc: 0.4170
