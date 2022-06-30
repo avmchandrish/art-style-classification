@@ -115,6 +115,8 @@ After only four epochs we were able to reach a similar level of performance to L
 
 ![image](https://user-images.githubusercontent.com/51177846/176795303-422ad2a4-7233-4962-be24-b85416aeae3c.png)
 
+As seen in the training logs we were able to reach validation accuracies of 41.7% for VGG-19, 38.17% for ResNet-34, and 45.86% for Vit-B/16, which fall between the original author's validation accuracy of 37.8% for AlexNet and 49.4% for ResNet-50.
+
 We definitely intend on further refining this work. Our next steps will be to train these models for longer using cloud computing resources such as AWS or GCP and to experiment with freezing/unfreezing different layers as well as fine-tuning the same models.
 
 
