@@ -8,7 +8,7 @@ Chandrish Ambati & Lucas De Oliveira
 * [Training notebook:](https://github.com/avmchandrish/art-style-classification/blob/main/training.ipynb) contains and explains functions used in training
 * [Training scripts:](https://github.com/avmchandrish/art-style-classification/tree/main/scripts) scripts launched from terminal for training
 * [Training logs:](https://github.com/avmchandrish/art-style-classification/tree/main/training_log) training results
-* Presentation slides: first and final presentation slides for this project
+* [Presentation slides](https://github.com/avmchandrish/art-style-classification/tree/main/slides): first and final presentation slides for this project
 
 
 
