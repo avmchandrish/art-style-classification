@@ -11,7 +11,11 @@ Chandrish Ambati & Lucas De Oliveira
 	* ResNet-34
 	* ViT-B/16
 * Training logs:
-* here
+	* VGG-19
+	* ResNet-34
+	* ViT-B/16
+* Model checkpoints
+* Visualizing the results
 
 
 ## Background
@@ -96,6 +100,8 @@ We decided that we would avoid image transformations that could destroy some inf
 ### Training method
 
 ... GPU from terminal ...
+
+... how many epochs, learning rate, etc ...
 
 ## Results
 
