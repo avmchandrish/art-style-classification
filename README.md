@@ -20,7 +20,7 @@ We all know that computer vision models are great at classifying images of objec
 
 For instance, we may feel confident that a computer vision neural network could correctly classify both of the below paintings as paintings of dogs. But could they tell that the left is an *renaissance* painting of a dog while the right is an *impressionist* painting of a dog?
 
-**img**
+![image](https://user-images.githubusercontent.com/51177846/176795578-10fe809f-715b-44cf-a64a-d849b68c72e3.png)
 
 In researching similar work, we discovered [this paper](http://proceedings.mlr.press/v77/lecoutre17a/lecoutre17a.pdf) where authors Lecoutre, Negrevergne, and Yger similarly train various pretrained and re-trained AlexNet and ResNet models to classify the styles of artwork obtained from [WikiArt](https://www.wikiart.org/en/paintings-by-style). We decided to re-create their experiment by training a different set of multi-class classification architectures to classify artworks into the same 25 classes:
 
@@ -103,17 +103,17 @@ Because of these constraints we were not able to tune training parameters or exp
 
 Below is the validation loss for the first four epochs of training for each model:
 
-**image**
+![image](https://user-images.githubusercontent.com/51177846/176795226-70e9e761-df0f-4d08-b66a-14ca0f0b2516.png)
 
 Below is the validation accuracy for the first four epochs of training for each model:
 
-**image**
+![image](https://user-images.githubusercontent.com/51177846/176795272-40d9f911-7cce-4b32-961a-da86d1cc157a.png)
 
 ## Results
 
 After only four epochs we were able to reach a similar level of performance to Lecoutre et. al. before their experiments with retraining, bagging, and distortion. Below is a plot of the validation set accuracy showing the top-1 accuracy of each model including the ones from the aforementioned paper.
 
-**image**
+![image](https://user-images.githubusercontent.com/51177846/176795303-422ad2a4-7233-4962-be24-b85416aeae3c.png)
 
 We definitely intend on further refining this work. Our next steps will be to train these models for longer using cloud computing resources such as AWS or GCP and to experiment with freezing/unfreezing different layers as well as fine-tuning the same models.
 
